@@ -15,9 +15,13 @@
 		D852FD9D1EC8EAF50053E026 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D852FD9B1EC8EAF50053E026 /* Main.storyboard */; };
 		D852FD9F1EC8EAF50053E026 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D852FD9E1EC8EAF50053E026 /* Assets.xcassets */; };
 		D852FDA21EC8EAF50053E026 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D852FDA01EC8EAF50053E026 /* LaunchScreen.storyboard */; };
+		DBCC98E462EB70910A39F2CB /* Pods_BestGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65654636EA4AD5494E356594 /* Pods_BestGame.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58C158F71C21EF2154C79872 /* Pods-BestGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BestGame/Pods-BestGame.debug.xcconfig"; sourceTree = "<group>"; };
+		65654636EA4AD5494E356594 /* Pods_BestGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86F3B270FF6AB34084D95ABB /* Pods-BestGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-BestGame/Pods-BestGame.release.xcconfig"; sourceTree = "<group>"; };
 		D852FD8E1EC8EAF50053E026 /* BestGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D852FD911EC8EAF50053E026 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D852FD931EC8EAF50053E026 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -35,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBCC98E462EB70910A39F2CB /* Pods_BestGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5093764D76435C6C6E112846 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58C158F71C21EF2154C79872 /* Pods-BestGame.debug.xcconfig */,
+				86F3B270FF6AB34084D95ABB /* Pods-BestGame.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D6D93940536F66B2B9DB402D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65654636EA4AD5494E356594 /* Pods_BestGame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D852FD851EC8EAF50053E026 = {
 			isa = PBXGroup;
 			children = (
 				D852FD901EC8EAF50053E026 /* BestGame */,
 				D852FD8F1EC8EAF50053E026 /* Products */,
+				5093764D76435C6C6E112846 /* Pods */,
+				D6D93940536F66B2B9DB402D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D852FDA61EC8EAF50053E026 /* Build configuration list for PBXNativeTarget "BestGame" */;
 			buildPhases = (
+				BF71E58E1369861B4891F6B2 /* [CP] Check Pods Manifest.lock */,
 				D852FD8A1EC8EAF50053E026 /* Sources */,
 				D852FD8B1EC8EAF50053E026 /* Frameworks */,
 				D852FD8C1EC8EAF50053E026 /* Resources */,
+				F3684AA569AD0FD24CF73A25 /* [CP] Embed Pods Frameworks */,
+				EEBA1F43C49AC8416A9E75FB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,6 +169,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BF71E58E1369861B4891F6B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EEBA1F43C49AC8416A9E75FB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BestGame/Pods-BestGame-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3684AA569AD0FD24CF73A25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BestGame/Pods-BestGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D852FD8A1EC8EAF50053E026 /* Sources */ = {
@@ -271,6 +346,7 @@
 		};
 		D852FDA71EC8EAF50053E026 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58C158F71C21EF2154C79872 /* Pods-BestGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8K8Z2GG545;
@@ -285,6 +361,7 @@
 		};
 		D852FDA81EC8EAF50053E026 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86F3B270FF6AB34084D95ABB /* Pods-BestGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8K8Z2GG545;
