@@ -15,6 +15,7 @@
 		D852FD9D1EC8EAF50053E026 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D852FD9B1EC8EAF50053E026 /* Main.storyboard */; };
 		D852FD9F1EC8EAF50053E026 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D852FD9E1EC8EAF50053E026 /* Assets.xcassets */; };
 		D852FDA21EC8EAF50053E026 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D852FDA01EC8EAF50053E026 /* LaunchScreen.storyboard */; };
+		D8AEA85E1ECBEED100033490 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8AEA85D1ECBEED100033490 /* GoogleService-Info.plist */; };
 		DBCC98E462EB70910A39F2CB /* Pods_BestGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65654636EA4AD5494E356594 /* Pods_BestGame.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		D852FD9E1EC8EAF50053E026 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D852FDA11EC8EAF50053E026 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D852FDA31EC8EAF50053E026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8AEA85D1ECBEED100033490 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				D852FD9E1EC8EAF50053E026 /* Assets.xcassets */,
 				D852FDA01EC8EAF50053E026 /* LaunchScreen.storyboard */,
 				D852FDA31EC8EAF50053E026 /* Info.plist */,
+				D8AEA85D1ECBEED100033490 /* GoogleService-Info.plist */,
 			);
 			path = BestGame;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				D852FD9F1EC8EAF50053E026 /* Assets.xcassets in Resources */,
 				D852FDA21EC8EAF50053E026 /* LaunchScreen.storyboard in Resources */,
 				D852FD961EC8EAF50053E026 /* Actions.sks in Resources */,
+				D8AEA85E1ECBEED100033490 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +397,7 @@
 				D852FDA81EC8EAF50053E026 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
