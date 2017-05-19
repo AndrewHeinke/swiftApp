@@ -13,14 +13,30 @@ import FirebaseDatabase
 class GameScene: SKScene {
    
    var myBarrier : SKSpriteNode?
+   var oppBarrier : SKSpriteNode?
+   
+   var opponentX : CGFloat = -42.04;
    var firebaseRef : FIRDatabaseReference?
    
    override func didMove(to view: SKView) {
       myBarrier = self.childNode(withName: "barrier") as? SKSpriteNode
+      oppBarrier = self.childNode(withName: "opponent") as? SKSpriteNode
       
       // set-up the connection to the FireBase database
       firebaseRef = FIRDatabase.database().reference(withPath: "player-positions")
       firebaseRef?.child("player1")
+      
+      firebaseRef?.observe(.value, with: { snapshot in
+         for item in snapshot.children{
+            if let snap = item as? FIRDataSnapshot{
+               if snap.key == "player2"{
+                  let snapshotValue = snap.value as! [String: AnyObject]
+                  self.opponentX = snapshotValue["xPos"] as! CGFloat
+               }
+               
+            }
+         }
+      })
    }
    
    
@@ -66,5 +82,6 @@ class GameScene: SKScene {
    
    override func update(_ currentTime: TimeInterval) {
       // Called before each frame is rendered
+      oppBarrier?.position.x = opponentX
    }
 }
